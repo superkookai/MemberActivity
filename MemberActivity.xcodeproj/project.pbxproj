@@ -6,17 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BFC6EA3C2D03EAC7008363EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC6EA362D03EAC7008363EE /* Preview Assets.xcassets */; };
+		BFC6EA3D2D03EAC7008363EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC6EA382D03EAC7008363EE /* Assets.xcassets */; };
+		BFC6EA3E2D03EAC7008363EE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA392D03EAC7008363EE /* MainView.swift */; };
+		BFC6EA3F2D03EAC7008363EE /* MemberActivityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA3A2D03EAC7008363EE /* MemberActivityApp.swift */; };
+		BFC6EA422D03EB48008363EE /* LoginPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA412D03EB48008363EE /* LoginPhoneView.swift */; };
+		BFC6EA442D03EBB5008363EE /* LoginOTPConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA432D03EBB5008363EE /* LoginOTPConfirmView.swift */; };
+		BFC6EA462D03F07D008363EE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA452D03F07D008363EE /* NetworkService.swift */; };
+		BFC6EA4B2D03F0ED008363EE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA4A2D03F0ED008363EE /* Model.swift */; };
+		BFC6EA4D2D03FDAD008363EE /* MemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA4C2D03FDAD008363EE /* MemberListView.swift */; };
+		BFC6EA4F2D03FDCE008363EE /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA4E2D03FDCE008363EE /* AccountView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BFC6EA252D03EAB8008363EE /* MemberActivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemberActivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC6EA362D03EAC7008363EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BFC6EA382D03EAC7008363EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFC6EA392D03EAC7008363EE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		BFC6EA3A2D03EAC7008363EE /* MemberActivityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberActivityApp.swift; sourceTree = "<group>"; };
+		BFC6EA412D03EB48008363EE /* LoginPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneView.swift; sourceTree = "<group>"; };
+		BFC6EA432D03EBB5008363EE /* LoginOTPConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOTPConfirmView.swift; sourceTree = "<group>"; };
+		BFC6EA452D03F07D008363EE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BFC6EA4A2D03F0ED008363EE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BFC6EA4C2D03FDAD008363EE /* MemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListView.swift; sourceTree = "<group>"; };
+		BFC6EA4E2D03FDCE008363EE /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		BFC6EA272D03EAB8008363EE /* MemberActivity */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MemberActivity;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BFC6EA222D03EAB8008363EE /* Frameworks */ = {
@@ -32,7 +47,7 @@
 		BFC6EA1C2D03EAB8008363EE = {
 			isa = PBXGroup;
 			children = (
-				BFC6EA272D03EAB8008363EE /* MemberActivity */,
+				BFC6EA3B2D03EAC7008363EE /* MemberActivity */,
 				BFC6EA262D03EAB8008363EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +58,47 @@
 				BFC6EA252D03EAB8008363EE /* MemberActivity.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BFC6EA372D03EAC7008363EE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BFC6EA362D03EAC7008363EE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BFC6EA3B2D03EAC7008363EE /* MemberActivity */ = {
+			isa = PBXGroup;
+			children = (
+				BFC6EA492D03F0B3008363EE /* Model */,
+				BFC6EA402D03EAD1008363EE /* Views */,
+				BFC6EA392D03EAC7008363EE /* MainView.swift */,
+				BFC6EA452D03F07D008363EE /* NetworkService.swift */,
+				BFC6EA3A2D03EAC7008363EE /* MemberActivityApp.swift */,
+				BFC6EA382D03EAC7008363EE /* Assets.xcassets */,
+				BFC6EA372D03EAC7008363EE /* Preview Content */,
+			);
+			path = MemberActivity;
+			sourceTree = "<group>";
+		};
+		BFC6EA402D03EAD1008363EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFC6EA412D03EB48008363EE /* LoginPhoneView.swift */,
+				BFC6EA432D03EBB5008363EE /* LoginOTPConfirmView.swift */,
+				BFC6EA4C2D03FDAD008363EE /* MemberListView.swift */,
+				BFC6EA4E2D03FDCE008363EE /* AccountView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFC6EA492D03F0B3008363EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFC6EA4A2D03F0ED008363EE /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +115,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				BFC6EA272D03EAB8008363EE /* MemberActivity */,
 			);
 			name = MemberActivity;
 			packageProductDependencies = (
@@ -109,6 +162,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC6EA3C2D03EAC7008363EE /* Preview Assets.xcassets in Resources */,
+				BFC6EA3D2D03EAC7008363EE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC6EA462D03F07D008363EE /* NetworkService.swift in Sources */,
+				BFC6EA3E2D03EAC7008363EE /* MainView.swift in Sources */,
+				BFC6EA442D03EBB5008363EE /* LoginOTPConfirmView.swift in Sources */,
+				BFC6EA4D2D03FDAD008363EE /* MemberListView.swift in Sources */,
+				BFC6EA4F2D03FDCE008363EE /* AccountView.swift in Sources */,
+				BFC6EA4B2D03F0ED008363EE /* Model.swift in Sources */,
+				BFC6EA3F2D03EAC7008363EE /* MemberActivityApp.swift in Sources */,
+				BFC6EA422D03EB48008363EE /* LoginPhoneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

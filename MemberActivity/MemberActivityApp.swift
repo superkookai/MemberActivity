@@ -11,7 +11,8 @@ import SwiftUI
 struct MemberActivityApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            LoginPhoneView()
         }
     }
 }
