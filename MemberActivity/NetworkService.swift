@@ -31,7 +31,7 @@ struct NetworkService{
         )
         
         let (_,response) = try await URLSession.shared.data(for: request)
-        guard let httpResponse = response as? HTTPURLResponse else {
+        guard let httpResponse = response as? HTTPURLResponse, (httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299) else {
             throw NetworkError.badResponse
         }
         print(httpResponse.statusCode)
@@ -53,7 +53,7 @@ struct NetworkService{
         )
         
         let (responseData,response) = try await URLSession.shared.data(for: request)
-        guard let httpResponse = response as? HTTPURLResponse else {
+        guard let httpResponse = response as? HTTPURLResponse, (httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299) else {
             throw NetworkError.badResponse
         }
         

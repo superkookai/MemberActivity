@@ -12,6 +12,7 @@ struct LoginPhoneView: View {
 
     @State private var phoneNumber: String = ""
     @State private var isPhoneCorrect: Bool = false
+    @State private var isShowAlert: Bool = false
     
     var body: some View {
         VStack{
@@ -36,6 +37,7 @@ struct LoginPhoneView: View {
                     }catch{
                         print("Error: \(error.localizedDescription)")
                         isPhoneCorrect = false
+                        isShowAlert = true
                     }
                     
                 }
@@ -50,6 +52,9 @@ struct LoginPhoneView: View {
         }
         .fullScreenCover(isPresented: $isPhoneCorrect) {
             LoginOTPConfirmView(phoneNumber: phoneNumber)
+        }
+        .alert("Phone number error", isPresented: $isShowAlert) {
+            
         }
     }
     

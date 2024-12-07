@@ -14,6 +14,7 @@ struct LoginOTPConfirmView: View {
     let phoneNumber: String
     @State private var otpCode: String = ""
     @State private var isLoginSuccess: Bool = false
+    @State private var isShowAlert: Bool = false
     
     var body: some View {
         VStack{
@@ -39,6 +40,7 @@ struct LoginOTPConfirmView: View {
                     }catch{
                         print("Error: \(error.localizedDescription)")
                         isLoginSuccess = false
+                        isShowAlert = true
                     }
                 }
             } label: {
@@ -60,6 +62,9 @@ struct LoginOTPConfirmView: View {
         }
         .fullScreenCover(isPresented: $isLoginSuccess) {
             MainView()
+        }
+        .alert("OTP Error", isPresented: $isShowAlert) {
+            
         }
     }
     
