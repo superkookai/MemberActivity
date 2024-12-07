@@ -15,6 +15,7 @@ struct MemberRowView: View {
         HStack(alignment: .top, spacing: 10){
             AsyncImage(url: URL(string: member.photoURL)) { image in
                 image
+                    .resizable()
                     .scaledToFill()
                     .frame(width: 60, height: 60)
                     .clipShape(.circle)
