@@ -46,11 +46,11 @@ struct Member: Decodable, Identifiable{
     let country: String
     let invitation: Bool?
     let id: String
-    let photoURL: URL
+    let photoURL: String
     let activities: [Activity]
 }
 
-struct Activity: Decodable{
+struct Activity: Decodable, Identifiable{
     let id: String
     let name: String
     let category: String

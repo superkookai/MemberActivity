@@ -9,10 +9,15 @@ import SwiftUI
 
 @main
 struct MemberActivityApp: App {
+    @AppStorage("token") var token: String?
+    
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            LoginPhoneView()
+            if let token {
+                MainView()
+            }else{
+                LoginPhoneView()
+            }
         }
     }
 }

@@ -10,11 +10,10 @@ import SwiftUI
 struct LoginOTPConfirmView: View {
     let networkService: NetworkService = NetworkService.shared
     @Environment(\.dismiss) var dismiss
-    
+    @AppStorage("token") var token: String?
     let phoneNumber: String
     @State private var otpCode: String = ""
     @State private var isLoginSuccess: Bool = false
-    @State private var token = ""
     
     var body: some View {
         VStack{
@@ -36,6 +35,7 @@ struct LoginOTPConfirmView: View {
                     do{
                         try await networkService.checkOTP(number: phoneNumber, code: otpCode)
                         isLoginSuccess = true
+                        token = NetworkService.token
                     }catch{
                         print("Error: \(error.localizedDescription)")
                         isLoginSuccess = false

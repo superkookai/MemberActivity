@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct AccountView: View {
+    @AppStorage("token") var token: String?
+    
     var body: some View {
-        Text("Account view")
+        NavigationStack {
+            List{
+                Text("John Doe")
+                
+                Button {
+                    token = nil
+                } label: {
+                    Text("Logout")
+                }
+
+            }
+            .navigationTitle("My Account")
+        }
     }
 }
 

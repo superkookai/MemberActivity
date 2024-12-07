@@ -17,6 +17,9 @@
 		BFC6EA4B2D03F0ED008363EE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA4A2D03F0ED008363EE /* Model.swift */; };
 		BFC6EA4D2D03FDAD008363EE /* MemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA4C2D03FDAD008363EE /* MemberListView.swift */; };
 		BFC6EA4F2D03FDCE008363EE /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA4E2D03FDCE008363EE /* AccountView.swift */; };
+		BFC6EA512D041416008363EE /* MemberRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA502D041416008363EE /* MemberRowView.swift */; };
+		BFC6EA542D0414DB008363EE /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = BFC6EA532D0414DB008363EE /* Flow */; };
+		BFC6EA5F2D0421FD008363EE /* MemberDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6EA5E2D0421FD008363EE /* MemberDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,8 @@
 		BFC6EA4A2D03F0ED008363EE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BFC6EA4C2D03FDAD008363EE /* MemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListView.swift; sourceTree = "<group>"; };
 		BFC6EA4E2D03FDCE008363EE /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		BFC6EA502D041416008363EE /* MemberRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRowView.swift; sourceTree = "<group>"; };
+		BFC6EA5E2D0421FD008363EE /* MemberDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC6EA542D0414DB008363EE /* Flow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +95,8 @@
 				BFC6EA432D03EBB5008363EE /* LoginOTPConfirmView.swift */,
 				BFC6EA4C2D03FDAD008363EE /* MemberListView.swift */,
 				BFC6EA4E2D03FDCE008363EE /* AccountView.swift */,
+				BFC6EA502D041416008363EE /* MemberRowView.swift */,
+				BFC6EA5E2D0421FD008363EE /* MemberDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 			);
 			name = MemberActivity;
 			packageProductDependencies = (
+				BFC6EA532D0414DB008363EE /* Flow */,
 			);
 			productName = MemberActivity;
 			productReference = BFC6EA252D03EAB8008363EE /* MemberActivity.app */;
@@ -147,6 +156,9 @@
 			);
 			mainGroup = BFC6EA1C2D03EAB8008363EE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BFC6EA522D0414DB008363EE /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BFC6EA262D03EAB8008363EE /* Products */;
 			projectDirPath = "";
@@ -174,6 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC6EA512D041416008363EE /* MemberRowView.swift in Sources */,
+				BFC6EA5F2D0421FD008363EE /* MemberDetailView.swift in Sources */,
 				BFC6EA462D03F07D008363EE /* NetworkService.swift in Sources */,
 				BFC6EA3E2D03EAC7008363EE /* MainView.swift in Sources */,
 				BFC6EA442D03EBB5008363EE /* LoginOTPConfirmView.swift in Sources */,
@@ -387,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BFC6EA522D0414DB008363EE /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tevelee/SwiftUI-Flow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BFC6EA532D0414DB008363EE /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFC6EA522D0414DB008363EE /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Flow;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BFC6EA1D2D03EAB8008363EE /* Project object */;
 }

@@ -95,4 +95,38 @@ struct NetworkService{
         
         return members
     }
+    
+    func getMembers(token: String) async throws -> [Member]{
+        let endpoint = "https://duogo-api-nrt7sspxha-as.a.run.app/users/discover"
+        guard let url = URL(string: endpoint) else { throw NetworkError.badURL }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        let (data,response) = try await URLSession.shared.data(for: request)
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw NetworkError.badResponse
+        }
+        
+//        if let jsonString = String(data: data, encoding: .utf8) {
+//            print("Response JSON: \(jsonString)")
+//        }
+        
+        //Decode JSON
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let wrapResponse = try decoder.decode(WrapResponse.self, from: data)
+        let members: [Member] = wrapResponse.data
+        print("Members: \(members)")
+        
+        return members
+    }
+    
+    static var preview: Member{
+        Member(firstName: "Jerry", lastName: "Murray", gender: "male", about: "Dream garden item western mind.", city: "Bangkok", country:  "TH", invitation: nil, id: "670b3af78c6055a1b05cf3b8", photoURL: "https://randomuser.me/api/portraits/men/52.jpg", activities: [Activity(id: "670a807f8c6055a1b05cf353", name: "Coffee", category: "Social")])
+    }
 }
+
+                                            
+ 
